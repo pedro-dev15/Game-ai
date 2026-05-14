@@ -1,13 +1,62 @@
 game-ai/
 │
-├── frontend/ # Next.js
+├── frontend/ # Frontend Next.js/React
+│ │
+│ ├── src/
+│ │ ├── app/
+│ │ ├── components/
+│ │ ├── services/
+│ │ ├── hooks/
+│ │ ├── contexts/
+│ │ ├── styles/
+│ │ └── utils/
+│ │
+│ ├── public/
+│ │
+│ └── package.json
 │
-├── backend/ # NestJS
 │
-├── ai-service/ # Python
+├── backend/ # Backend principal NestJS
+│ │
+│ ├── src/
+│ │ │
+│ │ ├── auth/
+│ │ ├── users/
+│ │ ├── chat/
+│ │ ├── games/
+│ │ ├── ai/
+│ │ ├── common/
+│ │ └── main.ts
+│ │
+│ ├── prisma/
+│ │ ├── schema.prisma
+│ │ └── migrations/
+│ │
+│ └── package.json
 │
-├── docker-compose.yml
+│
+├── ai-service/ # Serviço Python IA/RAG
+│ │
+│ ├── rag/
+│ ├── scraping/
+│ ├── embeddings/
+│ ├── prompts/
+│ ├── vector_db/
+│ │
+│ ├── main.py
+│ │
+│ ├── requirements.txt
+│ └── Dockerfile
+│
+│
+├── infrastructure/
+│ │
+│ ├── nginx/
+│ ├── docker/
+│ └── scripts/
+│
 │
 ├── .env
-│
+├── docker-compose.yml
+├── .gitignore
 └── README.md
